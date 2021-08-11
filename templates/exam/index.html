@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+<head>
+  Canadian College Online Examination
+</head>
+<body>
+  
+<div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+  {% include "exam/navbar.html" %}
+<br>
+<section id="section-jumbotron" class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center">
+
+  <div class="container text-center">
+    <img src="static/image/ccmt.png" width="180" height="180" style="border-radius: 100px; display: block; margin-left: auto; margin-right: auto">
+    <h2 class="display-3 text-info">Canadian College Online Examination</h2>
+    <br><br>
+    <a href="/student/studentsignup" class="btn btn-lg btn-info" style="padding-right: 45px; border-radius: 0%;">
+      <i class="fa fa-graduation-cap" aria-hidden="true"></i> 
+    Sign up as Student
+    </a> 
+  </div>  
+
+</section>
+
+  {% include "exam/footer.html" %}
+
+
+</body>
+
+</html>
