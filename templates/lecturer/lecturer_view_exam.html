@@ -1,4 +1,4 @@
-{% extends 'exam/adminbase.html' %}
+{% extends 'lecturer/lecturerbase.html' %}
 {% block content %}
 {%load static%}
 
@@ -25,30 +25,26 @@
 <div class="container">
   <div class="panel panel-primary">
     <div class="panel-heading">
-      <h6 class="panel-title">Pending Lecturers</h6>
+      <h6 class="panel-title">Available Courses</h6>
     </div>
     <table class="table table-hover table-bordered" id="dev-table">
       <thead>
         <tr>
 
-          <th>Name</th>
-          <th>Photo</th>
-          <th>Contact</th>
-          <th>Address</th>
-          
-          <th>Actions</th>
+          <th>Course</th>
+          <th>Total Question</th>
+          <th>Total Marks</th>
+          <th>Action</th>
         </tr>
       </thead>
-      {% for t in lecturers %}
+      {% for t in courses %}
       <tr>
 
-        <td> {{t.get_name}}</td>
-        <td> <img src="{% static t.profile_pic.url %}" alt="Profile Pic" height="40px" width="40px" /></td>
-        <td>{{t.mobile}}</td>
-        <td>{{t.address}}</td>
+        <td> {{t.course_name}}</td>
+        <td>{{t.question_number}}</td>
+        <td>{{t.total_marks}}</td>
         
-        <td><a class="btn btn-success btn-sm" style="border-radius: 0%;" href="{% url 'approve-lecturer' t.id  %}"><span class="glyphicon glyphicon-ok"></span></a>
-        <a class="btn btn-danger btn-sm" style="border-radius: 0%;" href="{% url 'reject-lecturer' t.id  %}"><span class="	glyphicon glyphicon-remove"></span></a></td>
+        <td><a class="btn btn-danger btn-xs" style="border-radius: 0%;" href="{% url 'delete-exam' t.id  %}"><span class="glyphicon glyphicon-trash"></span></a></td>
       </tr>
       {% endfor %}
     </table>

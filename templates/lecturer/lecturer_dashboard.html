@@ -1,4 +1,4 @@
-{% extends 'exam/adminbase.html' %}
+{% extends 'lecturer/lecturerbase.html' %}
 {% load widget_tweaks %}
 {% block content %}
 
@@ -33,8 +33,8 @@
         background: #F56565;
       }
   
-      .bg-c-pink {
-        background:#3186ca;
+      .bg-c-gtx {
+        background:#57717d;
       }
   
   
@@ -72,52 +72,36 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-md-4 col-xl-3">
-        <a href="admin-view-student" style="text-decoration: none;color:white;">
-        <div class="card bg-c-pink order-card">
-          <div class="card-block">
-            <h6 class="m-b-20">Registered Students </h6>
-            <h2 class="text-right"><i class="fas fa-user-graduate f-left"></i><span>{{total_student}}</span></h2>
-          </div>
-        </div>
-      </a>
-      </div>
       
-  
-      <div class="col-md-4 col-xl-3">
-        <a href="admin-view-lecturer" style="text-decoration: none;color:white;">
-        <div class="card bg-c-green order-card">
-          <div class="card-block">
-            <h6 class="m-b-20">Total Lecturers </h6>
-            <h2 class="text-right"><i class="fas fa-chalkboard-lecturer f-left"></i><span>{{total_lecturer}}</span></h2>
+        <div class="col-md-4 col-xl-4">
+            <div class="card bg-c-gtx order-card">
+              <div class="card-block">
+                <h6 class="m-b-20">Registered Students </h6>
+                <h2 class="text-right"><i class="fas fa-user-graduate f-left"></i><span>{{total_student}}</span></h2>
+                
+              </div>
+            </div>
           </div>
-        </div>
-      </a>
-      </div>
   
-      <div class="col-md-4 col-xl-3">
-        <a href="admin-view-course" style="text-decoration: none;color:white;">
-        <div class="card bg-c-blue order-card">
-          <div class="card-block">
-            <h6 class="m-b-20">Total Courses</h6>
-           <h2 class="text-right"><i class="fas fa-book f-left"></i><span>{{total_course}}</span></h2> 
-          </div>
-        </div>
-      </a>
-      </div>
-  
-      <div class="col-md-4 col-xl-3">
-        <a href="admin-view-question" style="text-decoration: none;color:white;">
+      <div class="col-md-4 col-xl-4">
         <div class="card bg-c-yellow order-card">
           <div class="card-block">
-            <h6 class="m-b-20">Available Questions</h6>
-            <h2 class="text-right"><i class="fas fa-question-circle f-left"></i><span>{{total_question}}</span></h2>
+            <h6 class="m-b-20">Total Courses</h6>
+           <h2 class="text-right"><i class="fas fa-book f-left"></i><span>{{total_course}}</span></h2>
+            
           </div>
         </div>
-      </a>
       </div>
-
-      
+  
+      <div class="col-md-4 col-xl-4">
+        <div class="card bg-c-blue order-card">
+          <div class="card-block">
+            <h6 class="m-b-20">Total Questions</h6>
+            <h2 class="text-right"><i class="fas fa-question-circle f-left"></i><span>{{total_question}}</span></h2>
+            
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 

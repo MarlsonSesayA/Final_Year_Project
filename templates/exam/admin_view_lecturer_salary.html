@@ -25,7 +25,7 @@
 <div class="container">
   <div class="panel panel-primary">
     <div class="panel-heading">
-      <h6 class="panel-title">Pending Lecturers</h6>
+      <h6 class="panel-title">Lecturer's Salary</h6>
     </div>
     <table class="table table-hover table-bordered" id="dev-table">
       <thead>
@@ -34,22 +34,19 @@
           <th>Name</th>
           <th>Photo</th>
           <th>Contact</th>
-          <th>Address</th>
+          <th>Salary</th>
+         
           
-          <th>Actions</th>
         </tr>
       </thead>
-      {% for t in lecturers %}
+      {% for t in Lecturer's %}
       <tr>
 
         <td> {{t.get_name}}</td>
         <td> <img src="{% static t.profile_pic.url %}" alt="Profile Pic" height="40px" width="40px" /></td>
         <td>{{t.mobile}}</td>
-        <td>{{t.address}}</td>
-        
-        <td><a class="btn btn-success btn-sm" style="border-radius: 0%;" href="{% url 'approve-lecturer' t.id  %}"><span class="glyphicon glyphicon-ok"></span></a>
-        <a class="btn btn-danger btn-sm" style="border-radius: 0%;" href="{% url 'reject-lecturer' t.id  %}"><span class="	glyphicon glyphicon-remove"></span></a></td>
-      </tr>
+        <td>${{t.salary}}</td>
+        </tr>
       {% endfor %}
     </table>
   </div>
