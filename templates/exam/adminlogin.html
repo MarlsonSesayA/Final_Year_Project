@@ -3,6 +3,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/button.min.css">
     <title></title>
     <style media="screen">
       body {
@@ -89,7 +90,7 @@
                      {% render_field form.username class="form-control" autocomplete="off" placeholder="Username" %}
                      {% render_field form.password class="form-control" autocomplete="off" placeholder="Password" %}
 
-                     <input type="submit" name="" value="Admin Login">
+                     <input class="ui inverted green button" type="submit" style="border-radius: 30px; padding: 20px;" value="Admin Login">
 
                 </form>
             </div>
